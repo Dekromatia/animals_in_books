@@ -1,11 +1,35 @@
-Template provided by InteractiveVis project
-http://blogs.oii.ox.ac.uk/vis/
-https://github.com/oxfordinternetinstitute/InteractiveVis/
+Корпус состоит 63 книг, авторов:
 
-Important. The files must be uploaded to a webserver (or run one locally) in order to be viewed. JavaScript security prevents running the pages locally without a webserver.
+1.	Виталий Валентинович Бианки - советский писатель
+2.	Джеральд Даррелл - английский натуралист, писатель, основатель “ зоопарка в Джерси”
+3.	Джеймс Хэрриот — английский писатель, ветеринар и лётчик, автор книг о животных и о людях
+4.	Эрнест Сетон-Томпсон - канадский писатель, художник-анималист, естествоиспытатель
+5.	Евге́ний Па́влович Спа́нгенберг — советский орнитолог, писатель-натуралист, кандидат биологических наук
+6.	И́горь Ива́нович Аки́мушкин — советский учёный-биолог, писатель, популяризатор биологии, автор научно-популярных книг о жизни животных
+7.	Альфред Эдмунд Брем — немецкий учёный-зоолог и путешественник, автор знаменитой научно-популярной работы «Brehms Tierleben»
 
-The InteractiveVis project of the Oxford Internet Institute with funding by JISC aims to allow easy creation of interactive visualisations for geospatial and network data using native web technologies (HTML5, CSS3, and SVG) and allow these visualisations to be self-contained so that they may run entirely offline in ebooks and other media. The project will survey existing solutions and build the necessary components to fill in missing features and smooth over incompatibilities in between existing libraries. The project will further provide online hosted wizards to allow for the easy creation of these interactive visualizations.
+Исследовательский вопрос:
+"Какие тексты ближе к друг другу по описываемому в них миру природы?"
 
-More information about the project is available on the project blog:
-http//blogs.oii.ox.ac.uk/vis/
+С помощью Python для кажлого текста был выполненв:
+токенизация
+лемматизация. 
+убраны стоп слова
+После для каждой книги был создан список животных.
+создан словарь вида: 
+ключ = животное 
+значение = список авторов
+удалены животные для которых был только 1 автор.
+
+И записанн в текстовый файл для дальнейшего создания csv-файла в Easy Linavis.
+Далее полученный файл был подгружен в GEFI
+
+вершины - это книги 
+ребро: если животное есть в 2 книгах
+
+Чем жиреннее связь тем больше одинаковых животных
+и чем жиренее узел 
+Цвета примерно покаывают набор разных животных
+
+Возможно стоило сгруппировать животных в группы по географическому признаку
 
