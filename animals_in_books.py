@@ -89,7 +89,7 @@ animal2books
 
 with open ('for_easy_linavis.txt', 'w') as f:
   for key, value  in animal2books.items():
-    if len(value)>45:
+    if len(value)>1:
       print(len(value))
       f.write("#" + key +'\n')
       for name in value:
